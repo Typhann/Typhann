@@ -1,0 +1,27 @@
+
+amount_years = 0
+sum_years = 0
+max_year = 0
+min_year = 110
+input_year = -1
+
+
+
+print("Enter years. To exit, press 0 ")
+
+while input_year != 0:
+    input_year = int(input("Year: "))
+    age = (2020 - input_year)
+    if age < 0 or age > 110 and age != 2020:
+        print("Error, Try again. ")
+    else:
+        if input_year > 0:
+            amount_years = amount_years + 1
+            sum_years = sum_years + age
+            if age < min_year:
+                min_year = age
+            if age > max_year:
+                max_year = age
+
+print("The average age is ", sum_years / amount_years, "years.")
+print("The youngest person is ", min_year, " and the oldest person is ", max_year)
